@@ -1,0 +1,124 @@
+# ─── Python ───────────────────────────────────────
+*.pyc
+*.pyo
+__pycache__/
+*.egg-info/
+.env
+.env.*
+!.env.example
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
+# ─── Virtual Environments ───────────────────────
+.venv/
+venv/
+env/
+*_venv/
+
+# ─── Patient Data & Personal Info (CRITICAL) ────
+# This ignores all files and directories starting with SR- or SR_, 
+# which are used for patient record identifiers (e.g., SR-000001, SR-000005)
+SR-*
+sr-*
+SR_*
+sr_*
+**/SR-*
+**/sr-*
+**/SR_*
+**/sr_*
+**/uploads/
+**/datasets/raw/
+**/patient_data/
+**/temp_data/
+# Specific patient names and scripts (generic patterns, do not add real names here)
+*_patient_export*
+*_medical_dump*
+organize_sr*.py
+ingest_*.py
+
+# Additional folder removals requested by user
+Data docs/
+database/
+datasets/
+upgrade/
+uploads/
+DATASET_LINKS.txt
+**/uploads/
+
+# ─── Medical Reports & Documents ─────────────────
+# Specific patterns for generated clinical reports
+*_report.txt
+*_report.pdf
+*_report.docx
+*_analysis.txt
+*_Corpus.txt
+pipeline_atram.txt
+pipeline_atram.log
+
+# General document types (optional, commented out if you want to keep some docs)
+# *.pdf
+# *.docx
+# *.xlsx
+
+# ─── Database ────────────────────────────────────
+*.db
+*.sqlite3
+*.sql
+*.dmp
+*.bak
+/database/local_*
+
+# ─── ML Model Weights (too large for git) ────────
+**/models/*.pkl
+**/models/*.h5
+**/models/*.pt
+**/models/*.bin
+**/models/*.weights
+*.pkl
+*.h5
+*.pt
+*.onnx
+*.joblib
+shared_models/
+
+# ─── Node / Next.js ──────────────────────────────
+node_modules/
+.next/
+out/
+dist/
+.npm
+.cache
+
+# ─── OS / IDE ─────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ─── SRRIS Clean Up Ignored Items ────────────────
+SRRIS_dump/
+backend/test_results.json
+backend/temp_ecg.json
+backend/temp/
+backend/test.ubj
+*.sqlite
+
+# Root level script/eval files (kept locally, but excluded from repo release)
+generate_all_diagrams.py
+generate_metrics.py
+model_evaluation_metrics.png
+
+# Thesis assets and sensitive medical documents (kept locally, excluded from repo release)
+docs/thesis_diagrams/
+docs/images/05_documents.png
+docs/images/05_radiology.png
+
+# Local datasets and development logs (kept locally, excluded from repo release)
+backend/data/
+**/retrain_history.jsonl
+
+

@@ -1,0 +1,5 @@
+﻿,Accuracy,Precision,Recall,F1-Score,ROC AUC
+Random Forest,0.7295597484276729,0.7518796992481203,0.9090909090909091,0.823045267489712,0.6178107606679035
+XGBoost,0.6415094339622641,0.7226890756302521,0.7818181818181819,0.7510917030567685,0.5541743970315399
+Neural Network,0.710691823899371,0.7461538461538462,0.8818181818181818,0.8083333333333333,0.6041743970315399
+Explanation,Overall correctness of the model (correct predictions / total predictions). Higher is better.,Proportion of true positive predictions among all positive predictions.,Proportion of actual positive cases correctly predicted.,Harmonic mean of Precision and Recall.,"Area under the ROC curve, measuring class separation ability."
